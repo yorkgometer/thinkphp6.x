@@ -13,7 +13,10 @@ use Yorkpack\Tool\Code;
  */
 class Test extends BaseController
 {
-
+    
+    public function webhook(){
+        echo "webhook实现本地提交远程master自动更新服务器上代码";
+    }
 
     public function limit($uid = 0)
     {
