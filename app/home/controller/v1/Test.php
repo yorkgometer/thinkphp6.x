@@ -15,7 +15,7 @@ class Test extends BaseController
 {
 
     public function webhook(){
-        echo "Beijing welcomes you";
+        return "Beijing welcomes you";
     }
 
     public function limit($uid = 0)

@@ -11,4 +11,5 @@ use think\facade\Route;
 //路由分组
 Route::group('admin',function (){
     Route::any('index', 'index/index');
+    //Route::any('test', 'test/index');
 });
