@@ -3,7 +3,7 @@
 <project name="tp6-cicd" default="build">
 	<!-- 目标之间可以互相依赖（depends），被依赖的目标会先被执行。-->
 	<target name="build" depends="dist,tar"/>
-	<!-- 定义打包的版本号 -->
+	<!-- 定义打包的版本号。 -->
 	<property name="version"    value="1.1.0" />
 	<!-- 定义打包文件名，buildnumber、buildid取自jenkins构建的build号 -->
 	<property name="tarfile"     value="${phing.project.name}.${buildnumber}.${buildid}.tar.gz" />
