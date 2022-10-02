@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HelloWorld" default="build">
+    <!-- 目标之间可以互相依赖（depends），被依赖的目标会先被执行。-->
+	<target name="build" depends="dist,tar"/>
+	<!-- 定义文件集，它们可以在被其它任务，比如复制任务所使用 -->
+	<fileset id="api.tar.gz" dir=".">
+		<!-- 包含文件，使用**表示递归包含，而单个*则表示不是递归包含 -->
+		<include name="**/**"/> 
+		<!-- exclude打包的时候排除哪些文件夹 -->
+		<exclude  name=".git/**"/>
+		<exclude  name="dist/**"/>
+	</fileset>
+		
+    <target name="dist">
+        <echo msg="Hello World!" />
+    </target>
+	
+	 <target name="tar" description="Create tar file for release">
+		<echo msg="Creating distribution tar"/>
+		<!-- 打包文件存储到dist文件夹-->
+        <tar destfile="dist/1.0.tar.gz" compression="gzip">
+			<!-- 使用上面定义的文件集 -->
+			<fileset refid="api.tar.gz"/>
+		</tar>
+    </target>
+</project>
