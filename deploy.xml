@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 项目名tp6-cicd，默认执行build任务 -->
-<project name="tp6-cicd" default="build">
-	<!-- 目标之间可以互相依赖（depends），被依赖的目标会先被执行-->
+<!-- 项目名thinkphp6.x，默认执行build任务 -->
+<project name="thinkphp6.x" default="build">
+	<!-- 目标之间可以互相依赖（depends），被依赖的目标会先被执行。-->
 	<target name="build" depends="dist,tar"/>
 	<!-- 定义打包的版本号 -->
-	<property name="version"    value="1.1.0" />
+	<property name="version" value="1.1.0" />
 	<!-- 定义打包文件名，buildnumber、buildid取自jenkins构建的build号 -->
-	<property name="tarfile"     value="${phing.project.name}.${buildnumber}.${buildid}.tar.gz" />
+	<property name="tarfile"  value="${phing.project.name}.${buildnumber}.${buildid}.tar.gz" />
 	<!-- 定义打包文件生成的目录/文件名 -->
 	<property name="distfile"    value="dist/${tarfile}" />
 	<!-- 定义文件集，它们可以在被其它任务，比如复制任务所使用 -->
