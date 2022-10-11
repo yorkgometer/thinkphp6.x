@@ -15,8 +15,15 @@ class Test extends BaseController
 {
 
     public function webhook(){
-        return "Beijing welcomes you 2049";
+        return "Beijing welcomes you 2022!";
     }
+
+
+
+
+
+
+
 
     public function limit($uid = 0)
     {
@@ -121,6 +128,13 @@ class Test extends BaseController
 
     public function index()
     {
+
+        $a=1;
+        $b=2;
+        $c=$a+$b;
+        echo $c;
+        
+        /*
         //设置缓存
         Cache::set('name', "ip:192.168.63.113", 3600);
         //读取缓存
@@ -129,6 +143,7 @@ class Test extends BaseController
         Cache::delete('name');
         //清空缓存
         Cache::clear();
+        */
     }
 
 

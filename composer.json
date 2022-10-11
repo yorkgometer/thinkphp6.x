@@ -31,17 +31,20 @@
         "swagger-api/swagger-ui": "3.x",
         "bshaffer/oauth2-server-php": "^1.12",
         "topthink/think-queue": "^3.0",
-        "topthink/think-swoole": "v3.1.2"
+        "topthink/think-swoole": "v3.0.10"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",
         "topthink/think-trace":"^1.0",
         "phing/phing": "2.*",
-        "pear/archive_tar": "*"
+        "pear/archive_tar": "*",
+        "mockery/mockery": "^1.5",
+        "phpunit/phpunit": "^9"
     },
     "autoload": {
         "psr-4": {
-            "app\\": "app"
+            "app\\": "app",
+            "tests\\":"tests"
         },
         "psr-0": {
             "": "extend/"

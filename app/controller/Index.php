@@ -9,9 +9,16 @@ use think\Request;
 
 class Index extends BaseController
 {
+    /*
     public function index()
     {
         return View::fetch('index');
+    }
+    */
+
+    public function index()
+    {
+        return 'hello';
     }
 
     public function submit(Request $request){
