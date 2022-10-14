@@ -5,7 +5,7 @@
 	<target name="buildtag" depends="dist,tar"/>
 	<!-- 定义打包的版本号 -->
 	<property name="version" value="1.1.0" />
-	<!-- 定义打包文件名，buildnumber、buildid取自jenkins构建的build号 -->
+	<!-- 定义打包文件名，${git_version}取自Jenkins"Build with Parameters"->选择需要部署的tag版本号-->
 	<property name="tarfile"  value="${phing.project.name}.${git_version}.tar.gz" />
 	<!-- 定义打包文件生成的目录/文件名 -->
 	<property name="distfile"    value="dist/${tarfile}" />
